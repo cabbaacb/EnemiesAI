@@ -9,9 +9,9 @@ namespace Ziggurat
 	public class UnitEnvironment : MonoBehaviour
 	{
 		[SerializeField]
-		private Animator _animator;
+		private Animator _animator = null;
 		[SerializeField]
-		private Collider _collider;
+		private Collider _collider = null;
 
 
 		/// <summary>

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace Ziggurat
 {
@@ -18,14 +19,23 @@ namespace Ziggurat
         private Vector3 _targetPoint = Vector3.zero;
         private UnitColor _color;
 
-        private void FixedUpdate()
+        private NavMeshAgent _navMeshAgent;
+
+        private void Awake()
         {
+            _navMeshAgent = GetComponent<NavMeshAgent>();
+        }
+
+        private void Start()
+        {
+            _navMeshAgent.speed = _speed;
             MoveTo(_targetPoint);
         }
 
         private void MoveTo(Vector3 targetPoint)
         {
-            transform.position = Vector3.MoveTowards(transform.position, targetPoint, _speed);
+            //transform.position = Vector3.MoveTowards(transform.position, targetPoint, _speed);
+            _navMeshAgent.destination = targetPoint;
         }
 
 

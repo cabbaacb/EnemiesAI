@@ -109,9 +109,9 @@ NavMeshSettings:
     agentRadius: 0.5
     agentHeight: 2
     agentSlope: 45
-    agentClimb: 0.4
+    agentClimb: 2
     ledgeDropHeight: 0
-    maxJumpAcrossDistance: 0
+    maxJumpAcrossDistance: 3
     minRegionArea: 2
     manualCellSize: 0
     cellSize: 0.16666667
@@ -120,7 +120,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 6ce369a04be5ef044bc12b243d19d199, type: 2}
 --- !u!1001 &6742464
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -131,6 +131,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_Name
       value: Sig Sag  Pyramid (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -188,6 +196,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6742464}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6742466 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 6742464}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &6742467
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6742466}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1001 &20312325
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -198,6 +228,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_Name
       value: Sig Sag  Pyramid (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -255,6 +293,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 20312325}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &20312327 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 20312325}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &20312328
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20312327}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1001 &49645944
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -265,6 +325,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_Name
       value: Sig Sag  Pyramid (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -322,6 +390,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 49645944}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &49645946 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 49645944}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &49645947
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49645946}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1001 &69073672
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -332,6 +422,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_Name
       value: Platform 1x13x13 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -400,6 +494,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor Blocks 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012712754930, guid: c0629ec7492d192449701967ef3c3894, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967263
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012712754930, guid: c0629ec7492d192449701967ef3c3894, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4000012413913880, guid: c0629ec7492d192449701967ef3c3894, type: 3}
       propertyPath: m_LocalPosition.x
       value: -48.2
@@ -457,6 +559,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 71869276}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &71869278 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000012712754930, guid: c0629ec7492d192449701967ef3c3894,
+    type: 3}
+  m_PrefabInstance: {fileID: 71869276}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &71869279
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71869278}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 3.9480002, y: 1.0610001, z: 4.506}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.24200001, y: -0.79200006, z: 0.272}
+  m_TimeToStationary: 0.5
 --- !u!1 &93308125
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,7 +595,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &93308126
 Transform:
@@ -497,6 +621,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_Name
       value: Platform 1x13x13 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -565,6 +693,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform 1x13x13 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -52
@@ -631,6 +763,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_Name
       value: Platform 1x13x13 Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -718,6 +854,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sig Sag  Pyramid (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 65
@@ -774,6 +918,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 184392333}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &184392335 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 184392333}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &184392336
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184392335}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1001 &192843585
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -784,6 +950,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_Name
       value: Sig Sag  Pyramid (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -841,6 +1015,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 192843585}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &192843587 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 192843585}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &192843588
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192843587}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1001 &301267748
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -851,6 +1047,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_Name
       value: Sig Sag  Pyramid (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -908,6 +1112,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 301267748}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &301267750 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 301267748}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &301267751
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301267750}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1001 &305147357
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -918,6 +1144,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_Name
       value: Sig Sag  Pyramid (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -975,6 +1209,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 305147357}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &305147359 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 305147357}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &305147360
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305147359}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1001 &352162313
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1035,6 +1291,41 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9e27bf700f7c24840bc80e8820b61d39, type: 2}
+    - target: {fileID: 271219507652918682, guid: 5c72e4b087a9733449c797b71a071e86,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2188792272500496601, guid: 5c72e4b087a9733449c797b71a071e86,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2842236861544265802, guid: 5c72e4b087a9733449c797b71a071e86,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5127339018786195279, guid: 5c72e4b087a9733449c797b71a071e86,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6048272874780062345, guid: 5c72e4b087a9733449c797b71a071e86,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6123543398987144210, guid: 5c72e4b087a9733449c797b71a071e86,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8118195314306419399, guid: 5c72e4b087a9733449c797b71a071e86,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c72e4b087a9733449c797b71a071e86, type: 3}
 --- !u!1001 &436936777
@@ -1047,6 +1338,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_Name
       value: Sig Sag  Pyramid (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1104,6 +1403,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 436936777}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &436936779 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 436936777}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &436936780
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436936779}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1 &441274097 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb,
@@ -1133,6 +1454,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_Name
       value: Sig Sag  Pyramid (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1190,6 +1519,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 465065295}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &465065297 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 465065295}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &465065298
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465065297}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1001 &485569663
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1200,6 +1551,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_Name
       value: Sig Sag  Pyramid (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1257,6 +1616,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 485569663}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &485569665 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 485569663}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &485569666
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485569665}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1001 &505526746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1267,6 +1648,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_Name
       value: Sig Sag  Pyramid (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1324,6 +1713,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 505526746}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &505526748 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 505526746}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &505526749
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505526748}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1001 &509051841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1334,6 +1745,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_Name
       value: Sig Sag  Pyramid (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1391,6 +1810,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 509051841}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &509051843 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 509051841}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &509051844
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509051843}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1001 &519165584
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1401,6 +1842,14 @@ PrefabInstance:
     - target: {fileID: 1000012712754930, guid: c0629ec7492d192449701967ef3c3894, type: 3}
       propertyPath: m_Name
       value: Floor Blocks 2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012712754930, guid: c0629ec7492d192449701967ef3c3894, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967263
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012712754930, guid: c0629ec7492d192449701967ef3c3894, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4000012413913880, guid: c0629ec7492d192449701967ef3c3894, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1459,6 +1908,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 519165584}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &519165586 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000012712754930, guid: c0629ec7492d192449701967ef3c3894,
+    type: 3}
+  m_PrefabInstance: {fileID: 519165584}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &519165587
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519165586}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 3.9480002, y: 1.0610001, z: 4.506}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.24200001, y: -0.79200006, z: 0.272}
+  m_TimeToStationary: 0.5
 --- !u!1001 &532426702
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1469,6 +1940,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_Name
       value: Sig Sag  Pyramid (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1526,6 +2005,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 532426702}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &532426704 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 532426702}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &532426705
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532426704}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1 &532899567
 GameObject:
   m_ObjectHideFlags: 0
@@ -1637,6 +2138,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sig Sag  Pyramid (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20
@@ -1693,6 +2202,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 554388839}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &554388841 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 554388839}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &554388842
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554388841}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1001 &568340401
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1703,6 +2234,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_Name
       value: Sig Sag  Pyramid (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1760,6 +2299,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 568340401}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &568340403 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 568340401}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &568340404
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568340403}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1001 &675299999
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1770,6 +2331,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_Name
       value: Sig Sag  Pyramid (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1827,6 +2396,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 675299999}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &675300001 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 675299999}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &675300002
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675300001}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1001 &687913463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1837,6 +2428,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_Name
       value: Sig Sag  Pyramid (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1894,6 +2493,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 687913463}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &687913465 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 687913463}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &687913466
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687913465}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1001 &716292611
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1904,6 +2525,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_Name
       value: Sig Sag  Pyramid (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1961,6 +2590,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 716292611}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &716292613 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 716292611}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &716292614
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716292613}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1001 &726320764
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1971,6 +2622,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_Name
       value: Platform 1x13x13 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2039,6 +2694,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sig Sag  Pyramid (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -63
@@ -2095,6 +2758,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 747798532}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &747798534 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 747798532}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &747798535
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747798534}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1001 &752355054
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2105,6 +2790,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_Name
       value: Sig Sag  Pyramid (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2162,6 +2855,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 752355054}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &752355056 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 752355054}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &752355057
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752355056}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1001 &803430881
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2172,6 +2887,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_Name
       value: Platform 1x13x13 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2240,6 +2959,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sig Sag  Pyramid (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 65
@@ -2296,6 +3023,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 807032176}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &807032178 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 807032176}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &807032179
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807032178}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1001 &810250894
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2306,6 +3055,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_Name
       value: Sig Sag  Pyramid (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2363,6 +3120,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 810250894}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &810250896 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 810250894}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &810250897
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810250896}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1001 &824442133
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2373,6 +3152,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_Name
       value: Sig Sag  Pyramid (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2430,6 +3217,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 824442133}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &824442135 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 824442133}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &824442136
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824442135}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1001 &845385878
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2440,6 +3249,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_Name
       value: Platform 1x13x13 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2508,6 +3321,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor Blocks 12 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e8e4f6970ef10f54b8ee4aadb8e29bff, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e8e4f6970ef10f54b8ee4aadb8e29bff, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e8e4f6970ef10f54b8ee4aadb8e29bff, type: 3}
       propertyPath: m_LocalPosition.x
       value: 54.71833
@@ -2564,6 +3385,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 932974203}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &932974205 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: e8e4f6970ef10f54b8ee4aadb8e29bff,
+    type: 3}
+  m_PrefabInstance: {fileID: 932974203}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &932974206
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932974205}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 6.7200003, y: 2.069, z: 7.3360004}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.157, y: 0.045, z: 0.133}
+  m_TimeToStationary: 0.5
 --- !u!1001 &971746985
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2574,6 +3417,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_Name
       value: Sig Sag  Pyramid (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2631,6 +3482,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 971746985}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &971746987 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 971746985}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &971746988
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971746987}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1001 &994773998
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2641,6 +3514,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 71dd2238ee2695749873f175c90d5448, type: 3}
       propertyPath: m_Name
       value: Fence Dark Corner
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 71dd2238ee2695749873f175c90d5448, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 71dd2238ee2695749873f175c90d5448, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 71dd2238ee2695749873f175c90d5448, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2698,6 +3579,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 994773998}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &994774000 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 71dd2238ee2695749873f175c90d5448,
+    type: 3}
+  m_PrefabInstance: {fileID: 994773998}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &994774001
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994774000}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 3.6840003, y: 1.613, z: 3.6840003}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -2.3160002, y: 1.613, z: -2.3160002}
+  m_TimeToStationary: 0.5
 --- !u!1 &1010354910
 GameObject:
   m_ObjectHideFlags: 0
@@ -2714,7 +3617,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1010354911
 Transform:
@@ -2770,6 +3673,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_Name
       value: Sig Sag  Pyramid (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2827,6 +3738,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1031826336}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1031826338 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1031826336}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &1031826339
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031826338}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1001 &1099884641
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2837,6 +3770,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_Name
       value: Sig Sag  Pyramid (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2894,6 +3835,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1099884641}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1099884643 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1099884641}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &1099884644
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099884643}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1001 &1117690472
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2904,6 +3867,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_Name
       value: Platform 1x13x13 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2972,6 +3939,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sig Sag  Pyramid (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -63
@@ -3028,6 +4003,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1131382277}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1131382279 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1131382277}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &1131382280
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131382279}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1001 &1161623513
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3038,6 +4035,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_Name
       value: Platform 1x13x13 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3106,6 +4107,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform 1x13x13 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -52
@@ -3172,6 +4177,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_Name
       value: Platform 1x13x13
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3261,7 +4270,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1258054977
 Transform:
@@ -3351,6 +4360,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform 1x13x13 Green
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -52
@@ -3417,6 +4430,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_Name
       value: Platform 1x13x13 Red
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3485,6 +4502,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blocks And Bricks 16
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 257983b39ec65a248a27b31a6ed263bf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 257983b39ec65a248a27b31a6ed263bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3552,6 +4573,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sig Sag  Pyramid (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -63
@@ -3608,6 +4637,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1315559267}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1315559269 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1315559267}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &1315559270
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315559269}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1001 &1366914554
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3618,6 +4669,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_Name
       value: Sig Sag  Pyramid (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3675,6 +4734,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1366914554}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1366914556 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1366914554}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &1366914557
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366914556}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1 &1390500029 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 257983b39ec65a248a27b31a6ed263bf,
@@ -3703,6 +4784,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_Name
       value: Sig Sag  Pyramid (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3760,6 +4849,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1407880685}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1407880687 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1407880685}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &1407880688
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407880687}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1001 &1410724687
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3770,6 +4881,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_Name
       value: Platform 1x13x13 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3838,6 +4953,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sig Sag  Pyramid (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 65
@@ -3894,6 +5017,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1412942308}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1412942310 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1412942308}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &1412942311
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412942310}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1001 &1413789805
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3904,6 +5049,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_Name
       value: Platform 1x13x13 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3972,6 +5121,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sig Sag  Pyramid (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 30
@@ -4028,6 +5185,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1446989941}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1446989943 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1446989941}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &1446989944
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446989943}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1 &1503877854
 GameObject:
   m_ObjectHideFlags: 0
@@ -4180,6 +5359,41 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9e27bf700f7c24840bc80e8820b61d39, type: 2}
+    - target: {fileID: 271219507652918682, guid: 5c72e4b087a9733449c797b71a071e86,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2188792272500496601, guid: 5c72e4b087a9733449c797b71a071e86,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2842236861544265802, guid: 5c72e4b087a9733449c797b71a071e86,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5127339018786195279, guid: 5c72e4b087a9733449c797b71a071e86,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6048272874780062345, guid: 5c72e4b087a9733449c797b71a071e86,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6123543398987144210, guid: 5c72e4b087a9733449c797b71a071e86,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8118195314306419399, guid: 5c72e4b087a9733449c797b71a071e86,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c72e4b087a9733449c797b71a071e86, type: 3}
 --- !u!1001 &1551203232
@@ -4192,6 +5406,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 59bfaabf5c24e1544a99ff1e59e464b5, type: 3}
       propertyPath: m_Name
       value: Block 5x5x6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 59bfaabf5c24e1544a99ff1e59e464b5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 59bfaabf5c24e1544a99ff1e59e464b5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4268,6 +5486,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor Blocks 12
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e8e4f6970ef10f54b8ee4aadb8e29bff, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e8e4f6970ef10f54b8ee4aadb8e29bff, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e8e4f6970ef10f54b8ee4aadb8e29bff, type: 3}
       propertyPath: m_LocalPosition.x
       value: 33.39
@@ -4324,6 +5550,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1614468367}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1614468369 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: e8e4f6970ef10f54b8ee4aadb8e29bff,
+    type: 3}
+  m_PrefabInstance: {fileID: 1614468367}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &1614468370
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614468369}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 6.7200003, y: 2.069, z: 7.3360004}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.157, y: 0.045, z: 0.133}
+  m_TimeToStationary: 0.5
 --- !u!1 &1617742197
 GameObject:
   m_ObjectHideFlags: 0
@@ -4340,7 +5588,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1617742198
 Transform:
@@ -4396,6 +5644,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_Name
       value: Sig Sag  Pyramid (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4453,6 +5709,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1633726093}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1633726095 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1633726093}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &1633726096
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633726095}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1001 &1640291475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4463,6 +5741,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_Name
       value: Sig Sag  Pyramid
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4520,6 +5806,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1640291475}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1640291477 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1640291475}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &1640291478
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640291477}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1001 &1709068048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4530,6 +5838,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 257983b39ec65a248a27b31a6ed263bf, type: 3}
       propertyPath: m_Name
       value: Blocks And Bricks 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 257983b39ec65a248a27b31a6ed263bf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 257983b39ec65a248a27b31a6ed263bf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4597,6 +5909,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_Name
       value: Platform 1x13x13 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4714,6 +6030,41 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9e27bf700f7c24840bc80e8820b61d39, type: 2}
+    - target: {fileID: 271219507652918682, guid: 5c72e4b087a9733449c797b71a071e86,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2188792272500496601, guid: 5c72e4b087a9733449c797b71a071e86,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2842236861544265802, guid: 5c72e4b087a9733449c797b71a071e86,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5127339018786195279, guid: 5c72e4b087a9733449c797b71a071e86,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6048272874780062345, guid: 5c72e4b087a9733449c797b71a071e86,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6123543398987144210, guid: 5c72e4b087a9733449c797b71a071e86,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8118195314306419399, guid: 5c72e4b087a9733449c797b71a071e86,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c72e4b087a9733449c797b71a071e86, type: 3}
 --- !u!1001 &1761189450
@@ -4726,6 +6077,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_Name
       value: Platform 1x13x13 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4794,6 +6149,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform 1x13x13 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4860,6 +6219,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 59bfaabf5c24e1544a99ff1e59e464b5, type: 3}
       propertyPath: m_Name
       value: Block 5x5x6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 59bfaabf5c24e1544a99ff1e59e464b5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 59bfaabf5c24e1544a99ff1e59e464b5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4936,6 +6299,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sig Sag  Pyramid (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 30
@@ -4992,6 +6363,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1798585445}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1798585447 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1798585445}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &1798585448
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1798585447}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1001 &1842778385
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5002,6 +6395,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_Name
       value: Platform 1x13x13 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5187,6 +6584,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform 1x13x13 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d2e14abe5970bf44b8c52c3a4ed682cb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 26
@@ -5271,6 +6672,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 257983b39ec65a248a27b31a6ed263bf, type: 3}
       propertyPath: m_Name
       value: Blocks And Bricks 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 257983b39ec65a248a27b31a6ed263bf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 257983b39ec65a248a27b31a6ed263bf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5377,6 +6782,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sig Sag  Pyramid (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 60
@@ -5433,6 +6846,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2029432716}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2029432718 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2029432716}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &2029432719
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029432718}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1001 &2039111238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5443,6 +6878,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_Name
       value: Sig Sag  Pyramid (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d14aa16cba6fbb849addc4054627712f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5500,6 +6943,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2039111238}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2039111240 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d14aa16cba6fbb849addc4054627712f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2039111238}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &2039111241
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039111240}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 3.0000002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3.0000002, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1 &2046393447
 GameObject:
   m_ObjectHideFlags: 0
@@ -5562,6 +7027,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 59bfaabf5c24e1544a99ff1e59e464b5, type: 3}
       propertyPath: m_Name
       value: Block 5x5x6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 59bfaabf5c24e1544a99ff1e59e464b5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 59bfaabf5c24e1544a99ff1e59e464b5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5643,7 +7112,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &2096191718
 Transform:

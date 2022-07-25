@@ -6,7 +6,7 @@ namespace Ziggurat
 {
     public class ZigguratController : MonoBehaviour
     {
-        [SerializeField] GameObject _unitPrefab;
+        [SerializeField] GameObject _unitPrefab = null;
         [SerializeField] float _spawnFrequency = 3f;
 
         private Vector3 _spawnPoint;

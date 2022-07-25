@@ -23,6 +23,14 @@ namespace Ziggurat
 		Z = 4
 	}
 
+	public enum UnitColor : byte
+    {
+		Red = 1,
+		Green = 2,
+		Blue = 3		
+    }
+
+
 	[System.Serializable]
 	public class AnimationKeyDictionary : SerializableDictionaryBase<AnimationType, string> { }
 }

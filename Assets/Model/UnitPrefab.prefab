@@ -2225,7 +2225,7 @@ GameObject:
   - component: {fileID: 7971482898358105659}
   - component: {fileID: 666834523338057198}
   m_Layer: 0
-  m_Name: RPGHeroPolyart
+  m_Name: UnitPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2322,11 +2322,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee97984995dfb5342b90b867230ff075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 0
-  _speed: 0
-  _lowDamage: 0
-  _strongDamage: 0
-  _missChance: 0
+  _health: 10
+  _speed: 1
+  _lowDamage: 2
+  _strongDamage: 5
+  _missChance: 0.2
   _doubleDamageChance: 0
   _lowToStrongAttackRatio: 0
 --- !u!1 &7973312293858233878

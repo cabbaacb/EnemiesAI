@@ -34,12 +34,24 @@ namespace Ziggurat
             // TATSNOT MOVING ANIMATION!!_unit.gameObject.GetComponent<UnitEnvironment>().Moving(1f);
         }
 
-        private void OnCollisionEnter(Collision collision)
+        private void OnEnable()
         {
-            if (collision.gameObject.layer != 8) return;
-            if (collision.gameObject.GetComponent<UnitData>().Color == _unit.Color) return;
+            ActiveRadius.OnFightCollision += CollisionEnter;
+
+        }
+
+        private void OnDisable()
+        {
+            ActiveRadius.OnFightCollision -= CollisionEnter;
+        }
+
+        private void CollisionEnter(Collision collision)
+        {
+            //if (collision.gameObject.layer != 8) return;
+            //if (collision.gameObject.GetComponent<UnitData>().Color == _unit.Color) return;
+            print("collision");
             if(!_isFighting)
-                Fight(collision.gameObject);
+                Fight(collision.gameObject.GetComponentInParent<UnitData>().gameObject);
             
             
         }
@@ -75,12 +87,14 @@ namespace Ziggurat
         }
         private IEnumerator MoveToEnemy(GameObject enemy)
         {
+            
             float destination = Vector3.Distance(_unit.transform.position, enemy.transform.position);
             while (destination > _unit.MaxDestinationToEnemy)
             {
                 _isFighting = false;
                 //transform.LookAt(enemy.transform);
                 MoveTo(enemy.transform.position);
+                print("moving");
                 destination = Vector3.Distance(_unit.transform.position, enemy.transform.position);
                 /*
                 if (destination <= 1)

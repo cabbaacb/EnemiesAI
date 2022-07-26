@@ -11,7 +11,7 @@ namespace Ziggurat
         [SerializeField] UnitColor _zigguratColor;
 
         private Vector3 _spawnPoint;
-
+        private List<UnitData> _units;
 
         private void Awake()
         {
@@ -26,6 +26,8 @@ namespace Ziggurat
             var unit = Instantiate(_unitPrefab.gameObject, _spawnPoint, Quaternion.identity);
             unit.GetComponent<UnitData>().SetColor(_zigguratColor);
             unit.layer = 8;
+
+            //_units.Add(unit.GetComponent<UnitData>());
             yield return new WaitForSeconds(_spawnFrequency);
             StartCoroutine(SpawnUnit());
         }

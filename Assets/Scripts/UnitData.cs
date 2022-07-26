@@ -13,8 +13,12 @@ namespace Ziggurat
         [SerializeField] [Range(0, 1)] private float _missChance;
         [SerializeField] [Range(0, 1)] private float _doubleDamageChance;
         [SerializeField] [Range(0, 100)] private int _lowToStrongAttackChanceRatio; //in percentage terms
+        [SerializeField] private float _maxDestinationToEnemy = 2;
+        
         [SerializeField] 
         private UnitColor _color;
+
+        
 
         public int Health { get => _health; }
         public float Speed { get => _speed; }
@@ -23,6 +27,7 @@ namespace Ziggurat
         public float MissChance { get => _missChance; }
         public float DoubleDamageChance { get => _doubleDamageChance; }
         public int LowToStrongAttackChanceRatio { get => _lowToStrongAttackChanceRatio; }
+        public float MaxDestinationToEnemy { get => _maxDestinationToEnemy; }
         public UnitColor Color { get => _color; }
 
 
@@ -36,5 +41,11 @@ namespace Ziggurat
         public void SetColor(UnitColor color) => _color = color;
 
         public void GetDamage(int damage) => _health -= damage;
+
+        //todo
+        public int SetDamage()
+        {
+            return _lowDamage;
+        }
     }
 }

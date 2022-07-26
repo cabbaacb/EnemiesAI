@@ -3649,7 +3649,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unitPrefab: {fileID: -126593117171412219, guid: 4786b0090dbb27a4f9d1517d5d6b7b0a,
     type: 3}
-  _spawnFrequency: 3
+  _spawnFrequency: 10
   _zigguratColor: 1
 --- !u!65 &1010354913
 BoxCollider:
@@ -5621,7 +5621,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unitPrefab: {fileID: -126593117171412219, guid: 4786b0090dbb27a4f9d1517d5d6b7b0a,
     type: 3}
-  _spawnFrequency: 3
+  _spawnFrequency: 10
   _zigguratColor: 3
 --- !u!65 &1617742200
 BoxCollider:
@@ -7146,7 +7146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unitPrefab: {fileID: -126593117171412219, guid: 4786b0090dbb27a4f9d1517d5d6b7b0a,
     type: 3}
-  _spawnFrequency: 3
+  _spawnFrequency: 10
   _zigguratColor: 2
 --- !u!65 &2096191720
 BoxCollider:

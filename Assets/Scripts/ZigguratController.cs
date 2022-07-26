@@ -6,8 +6,9 @@ namespace Ziggurat
 {
     public class ZigguratController : MonoBehaviour
     {
-        [SerializeField] GameObject _unitPrefab = null;
+        [SerializeField] UnitData _unitPrefab = null;
         [SerializeField] float _spawnFrequency = 3f;
+        [SerializeField] UnitColor _zigguratColor;
 
         private Vector3 _spawnPoint;
 
@@ -19,15 +20,12 @@ namespace Ziggurat
         }
 
 
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
 
         private IEnumerator SpawnUnit()
         {
-            Instantiate(_unitPrefab, _spawnPoint, Quaternion.identity);
+            var unit = Instantiate(_unitPrefab.gameObject, _spawnPoint, Quaternion.identity);
+            unit.GetComponent<UnitData>().SetColor(_zigguratColor);
+            unit.layer = 8;
             yield return new WaitForSeconds(_spawnFrequency);
             StartCoroutine(SpawnUnit());
         }

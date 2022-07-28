@@ -13,9 +13,13 @@ namespace Ziggurat
         private Vector3 _spawnPoint;
         private List<UnitData> _units;
 
+
+        public UnitColor ZigguratColor { get => _zigguratColor; }
+
         private void Awake()
         {
             _spawnPoint = GetComponentInChildren<SpawnPoint>().GetCoordinates();
+            _units = new List<UnitData>();
             StartCoroutine(SpawnUnit());
         }
 
@@ -25,11 +29,14 @@ namespace Ziggurat
         {
             var unit = Instantiate(_unitPrefab.gameObject, _spawnPoint, Quaternion.identity);
             unit.GetComponent<UnitData>().SetColor(_zigguratColor);
-            //unit.layer = 8;
-            unit.GetComponentInChildren<ActiveRadius>().gameObject.layer = 8;
-            //_units.Add(unit.GetComponent<UnitData>());
+            unit.layer = 8;
+            unit.GetComponent<UnitData>().SetZiggurat(this);
+            //unit.GetComponentInChildren<ActiveRadius>().gameObject.layer = 8;
+            _units.Add(unit.GetComponent<UnitData>());
             yield return new WaitForSeconds(_spawnFrequency);
             StartCoroutine(SpawnUnit());
         }
+
+        public List<UnitData> GetTargets() => _units;
     }
 }

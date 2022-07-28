@@ -17,7 +17,8 @@ namespace Ziggurat
         
         [SerializeField] 
         private UnitColor _color;
-
+        private UnitData _target = null;
+        private ZigguratController _ziggurat;
         
 
         public int Health { get => _health; }
@@ -28,7 +29,9 @@ namespace Ziggurat
         public float DoubleDamageChance { get => _doubleDamageChance; }
         public int LowToStrongAttackChanceRatio { get => _lowToStrongAttackChanceRatio; }
         public float MaxDestinationToEnemy { get => _maxDestinationToEnemy; }
+        public UnitData Target { get => _target; }
         public UnitColor Color { get => _color; }
+        public ZigguratController Ziggurat { get => _ziggurat; }
 
 
         public void SetHealth(int health) => _health = health;
@@ -39,6 +42,8 @@ namespace Ziggurat
         public void SetDoubleDamageChance(float chance) => _doubleDamageChance = chance;
         public void SetLowToStrongAttackChanceRatio(int ratio) => _lowToStrongAttackChanceRatio = ratio;
         public void SetColor(UnitColor color) => _color = color;
+        public void SetTarget(UnitData target) => _target = target;
+        public void SetZiggurat(ZigguratController ziggurat) => _ziggurat = ziggurat;
 
         public void GetDamage(int damage) => _health -= damage;
 

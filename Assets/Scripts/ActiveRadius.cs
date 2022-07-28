@@ -11,8 +11,9 @@ namespace Ziggurat
         private void OnCollisionEnter(Collision collision)
         {
             if (collision.gameObject.layer != 8) return;
-            if (collision.gameObject.GetComponentInParent<UnitData>().Color == GetComponentInParent<UnitData>().Color) return;
+            if (collision.gameObject.GetComponent<UnitData>().Color == GetComponent<UnitData>().Color) return;
             OnFightCollision?.Invoke(collision);
+            print("sphere");
 
         }
     }

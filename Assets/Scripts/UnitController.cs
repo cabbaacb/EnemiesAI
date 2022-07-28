@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using System.Linq;
 
 namespace Ziggurat
 {
@@ -13,6 +14,7 @@ namespace Ziggurat
         private Vector3 _targetPoint = Vector3.zero;
 
         private NavMeshAgent _navMeshAgent;
+        //private ZigguratController _ziggurat;
 
         private void Awake()
         {
@@ -22,8 +24,19 @@ namespace Ziggurat
 
         private void Start()
         {
+            //_ziggurat = FindObjectsOfType<ZigguratController>().Where(z => z.ZigguratColor == _unit.Color).ElementAt(0);
             _navMeshAgent.speed = _unit.Speed;
             MoveTo(_targetPoint);
+            GetToCenterAndFindTarget();
+        }
+
+        private void GetToCenterAndFindTarget()
+        {
+            while (Vector3.Distance(transform.position, Vector3.zero) >= 25) { }
+            FindTarget();
+            if (_unit.Target != null)
+                Fight(_unit.Target.gameObject);
+
         }
 
         private void MoveTo(Vector3 targetPoint)
@@ -34,6 +47,7 @@ namespace Ziggurat
             // TATSNOT MOVING ANIMATION!!_unit.gameObject.GetComponent<UnitEnvironment>().Moving(1f);
         }
 
+        /*
         private void OnEnable()
         {
             ActiveRadius.OnFightCollision += CollisionEnter;
@@ -44,6 +58,8 @@ namespace Ziggurat
         {
             ActiveRadius.OnFightCollision -= CollisionEnter;
         }
+
+        
 
         private void CollisionEnter(Collision collision)
         {
@@ -56,6 +72,8 @@ namespace Ziggurat
             
         }
                
+        */
+
         //todo here you can get the score points
         private void Fight(GameObject enemy)
         {
@@ -106,6 +124,24 @@ namespace Ziggurat
             print("IsFighting");
             yield return null;
             StartCoroutine(MoveToEnemy(enemy));
+        }
+
+
+        private void FindTarget()
+        {
+            List<UnitData> targets = _unit.Ziggurat.GetTargets();
+            float dist = 150;
+            UnitData targ = null;
+            foreach (var target in targets)
+            {
+                var d = Vector3.Distance(transform.position, target.transform.position);
+                if (d < dist)
+                {
+                    dist = d;
+                    targ = target;
+                }
+            }
+            _unit.SetTarget(targ);
         }
     }
 }

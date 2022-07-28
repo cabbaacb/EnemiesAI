@@ -9,9 +9,11 @@ namespace Ziggurat
         [SerializeField] UnitData _unitPrefab = null;
         [SerializeField] float _spawnFrequency = 3f;
         [SerializeField] UnitColor _zigguratColor;
+        [SerializeField] private GameManager _manager;
 
         private Vector3 _spawnPoint;
         private List<UnitData> _units;
+        
 
 
         public UnitColor ZigguratColor { get => _zigguratColor; }
@@ -20,6 +22,7 @@ namespace Ziggurat
         {
             _spawnPoint = GetComponentInChildren<SpawnPoint>().GetCoordinates();
             _units = new List<UnitData>();
+            _manager = new GameManager();
             StartCoroutine(SpawnUnit());
         }
 
@@ -33,6 +36,7 @@ namespace Ziggurat
             unit.GetComponent<UnitData>().SetZiggurat(this);
             //unit.GetComponentInChildren<ActiveRadius>().gameObject.layer = 8;
             _units.Add(unit.GetComponent<UnitData>());
+            _manager.AddUnitToAll(unit.GetComponent<UnitData>());
             yield return new WaitForSeconds(_spawnFrequency);
             StartCoroutine(SpawnUnit());
         }

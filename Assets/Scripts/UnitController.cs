@@ -14,12 +14,14 @@ namespace Ziggurat
         private Vector3 _targetPoint = Vector3.zero;
 
         private NavMeshAgent _navMeshAgent;
+        private GameManager _manager;
         //private ZigguratController _ziggurat;
 
         private void Awake()
         {
             _navMeshAgent = GetComponent<NavMeshAgent>();
             _unit = GetComponent<UnitData>();
+            _manager = FindObjectOfType<GameManager>();
         }
 
         private void Start()
@@ -129,11 +131,14 @@ namespace Ziggurat
 
         private void FindTarget()
         {
-            List<UnitData> targets = _unit.Ziggurat.GetTargets();
+            List<UnitData> myUnits = _unit.Ziggurat.GetTargets();
             float dist = 150;
             UnitData targ = null;
+            var targets = _manager.AllUnits;
+            
             foreach (var target in targets)
             {
+                if (myUnits.Contains(target)) return;
                 var d = Vector3.Distance(transform.position, target.transform.position);
                 if (d < dist)
                 {

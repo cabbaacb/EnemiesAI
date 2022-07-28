@@ -8,7 +8,7 @@ namespace Ziggurat
     {
         [SerializeField] UnitData _unitPrefab = null;
         [SerializeField] float _spawnFrequency = 3f;
-        [SerializeField] UnitColor _zigguratColor;
+        [SerializeField] UnitColor _zigguratColor = default;
 
         private Vector3 _spawnPoint;
         private List<UnitData> _units;

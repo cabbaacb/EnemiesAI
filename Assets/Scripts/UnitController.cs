@@ -14,10 +14,26 @@ namespace Ziggurat
 
         private NavMeshAgent _navMeshAgent;
 
+        private UnitEnvironment _unitEnvironment;
+
+        private bool _isMoving = false;
+        public bool IsMoving
+        {
+            get { return _isMoving; }
+            private set 
+            { 
+                _isMoving = value;
+                if (value) _unitEnvironment.Moving(1f);
+                else _unitEnvironment.Moving(0f);
+            }
+        }
+
+
         private void Awake()
         {
             _navMeshAgent = GetComponent<NavMeshAgent>();
             _unit = GetComponent<UnitData>();
+            _unitEnvironment = _unit.gameObject.GetComponent<UnitEnvironment>();
         }
 
         private void Start()
@@ -26,12 +42,12 @@ namespace Ziggurat
             MoveTo(_targetPoint);
         }
 
-        private void MoveTo(Vector3 targetPoint)
+        private void Update()
         {
-            //transform.position = Vector3.MoveTowards(transform.position, targetPoint, _speed);
-            _navMeshAgent.destination = targetPoint;
-            //todo moving animation
-            // TATSNOT MOVING ANIMATION!!_unit.gameObject.GetComponent<UnitEnvironment>().Moving(1f);
+            if (!_navMeshAgent.pathPending && !_navMeshAgent.hasPath)
+            {
+                IsMoving = false;
+            }
         }
 
         private void OnEnable()
@@ -55,7 +71,13 @@ namespace Ziggurat
             
             
         }
-               
+
+        private void MoveTo(Vector3 targetPoint)
+        {
+            _navMeshAgent.destination = targetPoint;
+            IsMoving = true;
+        }
+
         //todo here you can get the score points
         private void Fight(GameObject enemy)
         {

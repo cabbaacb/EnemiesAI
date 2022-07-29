@@ -48,11 +48,17 @@ namespace Ziggurat
 
         private IEnumerator GetToCenterAndFindTarget()
         {
-            while (Vector3.Distance(transform.position, Vector3.zero) >= 25) { yield return null; }
-            FindTarget();
-            if (_unit.Target != null)
-                Fight(_unit.Target.gameObject);
+            //while (Vector3.Distance(transform.position, Vector3.zero) >= 25) { yield return null; }
+            if (Vector3.Distance(transform.position, Vector3.zero) <= 25)
+            {
+                FindTarget();
+                if (_unit.Target != null)
+                    Fight(_unit.Target.gameObject);
+                yield return null;
+            }
 
+            yield return null;
+            StartCoroutine(GetToCenterAndFindTarget());
         }
 
         private void Update()

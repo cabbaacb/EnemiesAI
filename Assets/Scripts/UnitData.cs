@@ -13,13 +13,10 @@ namespace Ziggurat
         [SerializeField] [Range(0, 1)] private float _missChance;
         [SerializeField] [Range(0, 1)] private float _doubleDamageChance;
         [SerializeField] [Range(0, 100)] private int _lowToStrongAttackChanceRatio; //in percentage terms
-        [SerializeField] private float _maxDestinationToEnemy = 2;
+        [SerializeField] private float _detectionRadius = 2;
         
         [SerializeField] 
         private UnitColor _color;
-        private UnitData _target = null;
-        private ZigguratController _ziggurat;
-        
 
         public int Health { get => _health; }
         public float Speed { get => _speed; }
@@ -28,11 +25,8 @@ namespace Ziggurat
         public float MissChance { get => _missChance; }
         public float DoubleDamageChance { get => _doubleDamageChance; }
         public int LowToStrongAttackChanceRatio { get => _lowToStrongAttackChanceRatio; }
-        public float MaxDestinationToEnemy { get => _maxDestinationToEnemy; }
-        public UnitData Target { get => _target; }
+        public float DetectionRadius { get => _detectionRadius; }
         public UnitColor Color { get => _color; }
-        public ZigguratController Ziggurat { get => _ziggurat; }
-
 
         public void SetHealth(int health) => _health = health;
         public void SetSpeed(float speed) => _speed = speed;
@@ -42,8 +36,6 @@ namespace Ziggurat
         public void SetDoubleDamageChance(float chance) => _doubleDamageChance = chance;
         public void SetLowToStrongAttackChanceRatio(int ratio) => _lowToStrongAttackChanceRatio = ratio;
         public void SetColor(UnitColor color) => _color = color;
-        public void SetTarget(UnitData target) => _target = target;
-        public void SetZiggurat(ZigguratController ziggurat) => _ziggurat = ziggurat;
 
         public void GetDamage(int damage) => _health -= damage;
 

@@ -43,12 +43,12 @@ namespace Ziggurat
             //_ziggurat = FindObjectsOfType<ZigguratController>().Where(z => z.ZigguratColor == _unit.Color).ElementAt(0);
             _navMeshAgent.speed = _unit.Speed;
             MoveTo(_targetPoint);
-            GetToCenterAndFindTarget();
+            StartCoroutine(GetToCenterAndFindTarget());
         }
 
-        private void GetToCenterAndFindTarget()
+        private IEnumerator GetToCenterAndFindTarget()
         {
-            while (Vector3.Distance(transform.position, Vector3.zero) >= 25) { }
+            while (Vector3.Distance(transform.position, Vector3.zero) >= 25) { yield return null; }
             FindTarget();
             if (_unit.Target != null)
                 Fight(_unit.Target.gameObject);

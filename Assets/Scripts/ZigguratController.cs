@@ -27,14 +27,15 @@ namespace Ziggurat
 
         private IEnumerator SpawnUnit()
         {
-            var unit = Instantiate(_unitPrefab.gameObject, _spawnPoint, Quaternion.identity);
-            unit.GetComponent<UnitData>().SetColor(_zigguratColor);
+            GameObject unit = Instantiate(_unitPrefab.gameObject, _spawnPoint, Quaternion.identity);
+            UnitData unitData = unit.GetComponent<UnitData>();
+            unitData.SetColor(_zigguratColor);
             unit.layer = 8;
-            unit.GetComponent<UnitData>().SetZiggurat(this);
-            //unit.GetComponentInChildren<ActiveRadius>().gameObject.layer = 8;
+            unit.name = _zigguratColor.ToString() + "Knight";
+
             _units.Add(unit.GetComponent<UnitData>());
             yield return new WaitForSeconds(_spawnFrequency);
-            StartCoroutine(SpawnUnit());
+            //StartCoroutine(SpawnUnit());
         }
 
         public List<UnitData> GetTargets() => _units;

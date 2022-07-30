@@ -43,5 +43,10 @@ namespace Ziggurat
         }
 
         public List<UnitData> GetTargets() => _units;
+
+        public void SetParams(UnitData unit, int health)
+        {
+            unit.SetHealth(health);
+        }
     }
 }

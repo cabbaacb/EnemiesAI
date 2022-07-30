@@ -10,6 +10,8 @@ namespace Ziggurat
     {
         [SerializeField] private Text _zigguratText;
 
+        [SerializeField] private Slider _zigguratSlider;
+
         private ZigguratController _zigguratController;
         private bool _isActive = false;
         // Start is called before the first frame update
@@ -31,13 +33,15 @@ namespace Ziggurat
 
         private void SetZiggurat(ZigguratController ziggurat)
         {
+            if(_isActive = false)
+            {
+                _isActive = true;
+            }
+
+            _zigguratController = ziggurat;
+            //transform.LeanMoveLocal()
 
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
     }
 }

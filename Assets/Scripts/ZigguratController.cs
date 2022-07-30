@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Ziggurat
 {
@@ -14,7 +15,10 @@ namespace Ziggurat
         private List<UnitData> _units;
 
 
+        public delegate void ClickEventHandler(ZigguratController controller);
+        public static event ClickEventHandler OnClickEvent;
         public UnitColor ZigguratColor { get => _zigguratColor; }
+        public int UnitNumber { get => _units.Count; }
 
         private void Awake()
         {
@@ -23,7 +27,7 @@ namespace Ziggurat
             StartCoroutine(SpawnUnit());
         }
 
-
+        public void OnPointerClick(PointerEventData eventdata) => OnClickEvent?.Invoke(this);
 
         private IEnumerator SpawnUnit()
         {

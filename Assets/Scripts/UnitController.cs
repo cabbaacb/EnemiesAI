@@ -80,7 +80,8 @@ namespace Ziggurat
 
         public void Die()
         {
-            StopCoroutine(_attackRoutine);
+            if(_attackRoutine != null)
+                StopCoroutine(_attackRoutine);
             _unitEnvironment.StartAnimation("Die");
         }
 

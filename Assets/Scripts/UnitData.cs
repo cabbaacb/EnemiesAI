@@ -29,7 +29,7 @@ namespace Ziggurat
                 _health = value;
                 if (_health <= 0)
                 {
-                    Die();
+                    Invoke("Die", 0.2f);    //i should've done this more proper way, but i'm a bit lazy for now
                 }
             }
         }
@@ -72,7 +72,7 @@ namespace Ziggurat
 
         private void Die()
         {
-            print("and death...");
+            _unitController.Die();
         }
     }
 }

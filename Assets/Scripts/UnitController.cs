@@ -53,6 +53,10 @@ namespace Ziggurat
             if (_target == null)
             {
                 FindTarget();
+                if (_target == null && !IsMoving)
+                {
+                    Wander();
+                }
             }
             else if (_target != null && Vector3.Distance (transform.position, _target.transform.position) > 2f)
             {
@@ -71,7 +75,13 @@ namespace Ziggurat
 
         public void TakeDamage()
         {
+            _unitEnvironment.StartAnimation("Impact");
+        }
 
+        public void Die()
+        {
+            StopCoroutine(_attackRoutine);
+            _unitEnvironment.StartAnimation("Die");
         }
 
         private void MoveTo(Vector3 targetPoint)
@@ -95,7 +105,8 @@ namespace Ziggurat
                         if (distance < minDistance)
                         {
                             minDistance = distance;
-                            _target = hitCollider.GetComponent<UnitData>();
+                            UnitData target = hitCollider.GetComponent<UnitData>();
+                            if (target.Health > 0) _target = target;
                         }
                     }
                 }
@@ -104,6 +115,8 @@ namespace Ziggurat
 
         private IEnumerator AttackRoutine()
         {
+            if (_target == null || _target.Health <= 0) yield break;
+
             transform.LookAt(_target.transform);    //todo: write proper logic for rotation towards target
             SelectAndStartAttack();
             yield return new WaitForSeconds(_unit.AttackInterval);
@@ -122,6 +135,12 @@ namespace Ziggurat
             {
                 _unitEnvironment.StartAnimation("Strong");
             }
+        }
+
+        private void Wander()
+        {
+            Vector3 newDestination = Random.insideUnitSphere * _unit.DetectionRadius;
+            MoveTo(newDestination);
         }
     }
 }

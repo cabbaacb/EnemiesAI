@@ -16,6 +16,9 @@ namespace Ziggurat
 
         private Coroutine _attackRoutine;
 
+        public delegate void DeathEventHandler(UnitData unit);
+        public static event DeathEventHandler OnDeathEvent;
+
         [SerializeField] private bool _isMoving = false;
         public bool IsMoving
         {
@@ -82,6 +85,7 @@ namespace Ziggurat
         {
             if(_attackRoutine != null)
                 StopCoroutine(_attackRoutine);
+            OnDeathEvent?.Invoke(_unit);
             _unitEnvironment.StartAnimation("Die");
         }
 

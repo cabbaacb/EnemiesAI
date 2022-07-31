@@ -20,7 +20,10 @@ namespace Ziggurat
         private UnitColor _color;
 
         private UnitController _unitController;
+        private int _maxHealth = 50;
 
+
+        public int MaxHealth { get => _maxHealth; }
         public int Health 
         { 
             get => _health;
@@ -51,6 +54,12 @@ namespace Ziggurat
                 _health = health;
             }
         }
+
+        public void SetMaxHealth(int health)
+        {
+            _maxHealth = health;
+        }
+
         public void SetSpeed(float speed) => _speed = speed;
         public void SetFastDamage(int damage) => _fastAttackDamage = damage;
         public void SetStrongDamage(int damage) => _strongAttackDamage = damage;
@@ -74,5 +83,6 @@ namespace Ziggurat
         {
             _unitController.Die();
         }
+
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using System.Linq;
+using UnityEngine.UI;
 
 namespace Ziggurat
 {
@@ -20,6 +21,9 @@ namespace Ziggurat
         public static event DeathEventHandler OnDeathEvent;
 
         [SerializeField] private bool _isMoving = false;
+
+
+
         public bool IsMoving
         {
             get { return _isMoving; }

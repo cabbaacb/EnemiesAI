@@ -1492,6 +1492,8 @@ MonoBehaviour:
   _blueZig: {fileID: 1617742199}
   _stats: {fileID: 85533833}
   _showButton: {fileID: 927149744}
+  _healthButton: {fileID: 1733503266}
+  _killButton: {fileID: 87599621}
 --- !u!1001 &301267748
 PrefabInstance:
   m_ObjectHideFlags: 0

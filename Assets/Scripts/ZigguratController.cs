@@ -12,11 +12,11 @@ namespace Ziggurat
 
         private Vector3 _spawnPoint;
         private List<UnitData> _units;
-
+        private bool _showHealthBar = true;
 
         
         public UnitColor ZigguratColor { get => _zigguratColor; }
-        public int UnitNumber { get => _units.Count; }
+        public int UnitsNumber { get => _units.Count; }
 
         private void Awake()
         {
@@ -27,11 +27,15 @@ namespace Ziggurat
         private void OnEnable()
         {
             UnitController.OnDeathEvent += DeleteUnit;
+            UnitNumber.OnShowHealthBar += ShowHealthBars;
+            UnitNumber.OnKillEveryone += KillEveryone;
         }
 
         private void OnDisable()
         {
             UnitController.OnDeathEvent -= DeleteUnit;
+            UnitNumber.OnShowHealthBar -= ShowHealthBars;
+            UnitNumber.OnKillEveryone -= KillEveryone;
         }
 
         private void DeleteUnit(UnitData unit)
@@ -47,17 +51,50 @@ namespace Ziggurat
             unitData.SetColor(_zigguratColor);
             unit.layer = 8;
             unit.name = _zigguratColor.ToString() + "Knight";
+            if (_showHealthBar)
+                unit.GetComponentInChildren<HealthBar>().gameObject.SetActive(true);
+            else
+                unit.GetComponentInChildren<HealthBar>().gameObject.SetActive(false);
+
 
             _units.Add(unit.GetComponent<UnitData>());
             yield return new WaitForSeconds(_spawnFrequency);
             StartCoroutine(SpawnUnit());
         }
 
-        public List<UnitData> GetTargets() => _units;
+        public List<UnitData> GetUnits() => _units;
 
-        public void SetParams(UnitData unit, int health)
+        public UnitData SetParams(UnitData unit, int health)
         {
             unit.SetHealth(health);
+
+            return unit;
         }
+
+
+        private void ShowHealthBars(bool show)
+        {
+            if(show)
+                foreach (var unit in _units)
+                {
+                    unit.GetComponentInChildren<HealthBar>().gameObject.SetActive(true);
+                    _showHealthBar = true;
+                }
+            else
+                foreach(var unit in _units)
+                {
+                    unit.GetComponentInChildren<HealthBar>().gameObject.SetActive(false);
+                    _showHealthBar = false;
+                }
+
+        }
+
+
+        private void KillEveryone()
+        {
+            foreach (var unit in _units)
+                DeleteUnit(unit);
+        }
+
     }
 }

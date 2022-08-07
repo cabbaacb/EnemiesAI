@@ -93,7 +93,8 @@ namespace Ziggurat
 
         public void Die()
         {
-            if(_attackRoutine != null)
+            gameObject.layer = 0;
+            if (_attackRoutine != null)
                 StopCoroutine(_attackRoutine);
             OnDeathEvent?.Invoke(_unit);
             _unitEnvironment.StartAnimation("Die");
@@ -121,7 +122,8 @@ namespace Ziggurat
                         {
                             minDistance = distance;
                             UnitData target = hitCollider.GetComponent<UnitData>();
-                            if (target.gameObject.layer == 8 && target.Health > 0) _target = target;
+                            //print(gameObject.name + " " + target.name);
+                            if (target != null && target.Health > 0) _target = target;
                         }
                     }
                 }

@@ -28,13 +28,13 @@ namespace Ziggurat
 
         private void OnEnable()
         {
-            SpawnPoint.OnClickEvent += SetZiggurat;
+            ZigguratController.OnClickEvent += SetZiggurat;
             _button.onClick.AddListener(ShowMenu);
         }
 
         private void OnDisable()
         {
-            SpawnPoint.OnClickEvent -= SetZiggurat;
+            ZigguratController.OnClickEvent -= SetZiggurat;
             _button.onClick.RemoveAllListeners();
         }
 

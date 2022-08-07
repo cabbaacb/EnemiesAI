@@ -8,12 +8,12 @@ namespace Ziggurat
 {
     public class ZigguratPanel : MonoBehaviour
     {
-        [SerializeField] private Text _zigguratText;
+        //[SerializeField] private Text _zigguratText = null;
 
-        [SerializeField] private Slider _zigguratSlider;
-        [SerializeField] private Button _button;
+        //[SerializeField] private Slider _zigguratSlider = null;
+        [SerializeField] private Button _button = null;
 
-        private ZigguratController _zigguratController;
+        private ZigguratController _zigguratController = null;
         private bool _isActive = false;
 
         private Vector2 _hidenPosition = new Vector2(-126, 66);

@@ -59,7 +59,7 @@ namespace Ziggurat
 
             _units.Add(unit.GetComponent<UnitData>());
             yield return new WaitForSeconds(_spawnFrequency);
-            StartCoroutine(SpawnUnit());
+            //StartCoroutine(SpawnUnit());
         }
 
         public List<UnitData> GetUnits() => _units;

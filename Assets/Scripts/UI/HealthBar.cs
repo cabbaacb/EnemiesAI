@@ -7,14 +7,22 @@ namespace Ziggurat
 {
     public class HealthBar : MonoBehaviour
     {
-        [SerializeField] private UnitData _unit;
-        [SerializeField] private Image _healthBarInner;
+        [SerializeField] private UnitData _unit = null;
+        [SerializeField] private Image _healthBarInner = null;
 
-        // Update is called once per frame
-        void Update()
+        public void UpdateHealthBar()
         {
-            _healthBarInner.fillAmount = Mathf.Clamp(_unit.Health / _unit.MaxHealth, 0, 1f);
-            //_healthBarInner.fillAmount = _unit.Health / _unit.MaxHealth;
+            _healthBarInner.fillAmount = Mathf.Clamp((float)_unit.Health / (float)_unit.MaxHealth, 0f, 1f);
+        }
+
+        private void OnEnable()
+        {
+            _unit.OnHealthChange += UpdateHealthBar;
+        }
+
+        private void OnDisable()
+        {
+            _unit.OnHealthChange -= UpdateHealthBar;
         }
     }
 }

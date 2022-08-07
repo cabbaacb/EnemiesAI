@@ -51,6 +51,8 @@ namespace Ziggurat
 
         private void Update()
         {
+            if (gameObject.layer != 8) return;
+
             if (!_navMeshAgent.pathPending && _navMeshAgent.remainingDistance < 1f)
             {
                 _navMeshAgent.isStopped = true;
@@ -64,6 +66,10 @@ namespace Ziggurat
                 {
                     Wander();
                 }
+            }
+            else if (_target != null && _target.gameObject.layer != 8)
+            {
+                _target = null;
             }
             else if (_target != null && Vector3.Distance (transform.position, _target.transform.position) > 2f)
             {
@@ -108,14 +114,14 @@ namespace Ziggurat
                 float minDistance = Mathf.Infinity;
                 foreach (var hitCollider in hitColliders)
                 {
-                    if (hitCollider.gameObject.layer == gameObject.layer && hitCollider.name != name)
+                    if (hitCollider.gameObject.layer == 8 && hitCollider.name != name)
                     {
                         float distance = Vector3.Distance(transform.position, hitCollider.transform.position);
                         if (distance < minDistance)
                         {
                             minDistance = distance;
                             UnitData target = hitCollider.GetComponent<UnitData>();
-                            if (target.Health > 0) _target = target;
+                            if (target.gameObject.layer == 8 && target.Health > 0) _target = target;
                         }
                     }
                 }

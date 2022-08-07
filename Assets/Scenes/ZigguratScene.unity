@@ -3192,8 +3192,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 880d21e79c50edd47a5123167cdf6320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _zigguratText: {fileID: 1210120912}
-  _zigguratSlider: {fileID: 342465985}
   _button: {fileID: 2122553898}
 --- !u!1001 &675299999
 PrefabInstance:
@@ -7086,7 +7084,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1617742197}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c3a90dd54348c3469f7e15cda914aef, type: 3}
   m_Name: 

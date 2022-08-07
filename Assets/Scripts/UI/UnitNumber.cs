@@ -7,13 +7,13 @@ namespace Ziggurat
 {
     public class UnitNumber : MonoBehaviour
     {
-        [SerializeField] private ZigguratController _greenZig;
-        [SerializeField] private ZigguratController _redZig;
-        [SerializeField] private ZigguratController _blueZig;
-        [SerializeField] private Text _stats;
-        [SerializeField] private Button _showButton;
-        [SerializeField] private Button _healthButton;
-        [SerializeField] private Button _killButton;
+        [SerializeField] private ZigguratController _greenZig = null;
+        [SerializeField] private ZigguratController _redZig = null;
+        [SerializeField] private ZigguratController _blueZig = null;
+        [SerializeField] private Text _stats = null;
+        [SerializeField] private Button _showButton = null;
+        [SerializeField] private Button _healthButton = null;
+        [SerializeField] private Button _killButton = null;
 
         public delegate void ShowHealthBarHandler(bool show);
         public static event ShowHealthBarHandler OnShowHealthBar;

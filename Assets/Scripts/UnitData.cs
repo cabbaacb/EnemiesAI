@@ -77,12 +77,15 @@ namespace Ziggurat
         {
             _unitController.TakeDamage();
             Health -= damage;
+            OnHealthChange?.Invoke();
         }
 
         private void Die()
         {
+            gameObject.layer = 0;
             _unitController.Die();
         }
 
+        public event System.Action OnHealthChange;
     }
 }

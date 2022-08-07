@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Ziggurat
 {
-    public class ZigguratController : MonoBehaviour
+    public class ZigguratController : MonoBehaviour, IPointerClickHandler
     {
         [SerializeField] UnitData _unitPrefab = null;
         [SerializeField] float _spawnFrequency = 3f;
@@ -17,6 +18,9 @@ namespace Ziggurat
         
         public UnitColor ZigguratColor { get => _zigguratColor; }
         public int UnitsNumber { get => _units.Count; }
+
+        public delegate void ClickEventHandler(ZigguratController controller);
+        public static event ClickEventHandler OnClickEvent;
 
         private void Awake()
         {
@@ -36,6 +40,12 @@ namespace Ziggurat
             UnitController.OnDeathEvent -= DeleteUnit;
             UnitNumber.OnShowHealthBar -= ShowHealthBars;
             UnitNumber.OnKillEveryone -= KillEveryone;
+        }
+
+        public void OnPointerClick(PointerEventData eventdata)
+        {
+            OnClickEvent?.Invoke(this);
+            Debug.Log(_zigguratColor + "Ziggurat");
         }
 
         private void DeleteUnit(UnitData unit)

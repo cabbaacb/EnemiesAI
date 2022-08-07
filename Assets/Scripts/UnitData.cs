@@ -82,7 +82,6 @@ namespace Ziggurat
 
         private void Die()
         {
-            gameObject.layer = 0;
             _unitController.Die();
         }
 

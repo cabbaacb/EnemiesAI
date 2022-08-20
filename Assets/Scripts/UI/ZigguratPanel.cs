@@ -8,69 +8,76 @@ namespace Ziggurat
 {
     public class ZigguratPanel : MonoBehaviour
     {
-        //[SerializeField] private Text _zigguratText = null;
+        [SerializeField] private Text _zigguratText = null;
 
         //[SerializeField] private Slider _zigguratSlider = null;
-        [SerializeField] private Button _button = null;
+        [SerializeField] private Button _hideButton = null;
 
         private ZigguratController _zigguratController = null;
-        private bool _isActive = false;
+        private ZigguratController Ziggurat
+        {
+            get { return _zigguratController; }
+            set
+            { 
+                _zigguratController = value;
+                _zigguratText.text = value.ZigguratColor.ToString() + " Ziggurat";
+            }
+        }
 
-        private Vector2 _hidenPosition = new Vector2(-126, 66);
+
+        private Vector2 _hiddenPosition;
         private Vector2 _shownPosition = new Vector2(126, 66);
 
-        // Start is called before the first frame update
+        private bool _isActive = false;
+        private bool IsActive
+        {
+            get { return _isActive; }
+            set
+            {
+                _isActive = value;
+                if (_isActive)
+                {
+                    StartCoroutine(MoveFromTo(_hiddenPosition, _shownPosition, 1f));
+                }
+                if (!_isActive)
+                {
+                    StartCoroutine(MoveFromTo(_shownPosition, _hiddenPosition, 1f));
+                }
+            }
+        }
+
         void Start()
         {
-            transform.position = _hidenPosition;
-            //_zigguratText.text =
+            _hiddenPosition = transform.position;
         }
 
         private void OnEnable()
         {
             ZigguratController.OnClickEvent += SetZiggurat;
-            _button.onClick.AddListener(ShowMenu);
+            _hideButton.onClick.AddListener(ShowMenu);
         }
 
         private void OnDisable()
         {
             ZigguratController.OnClickEvent -= SetZiggurat;
-            _button.onClick.RemoveAllListeners();
+            _hideButton.onClick.RemoveAllListeners();
         }
 
 
         
         private void SetZiggurat(ZigguratController ziggurat)
         {
-            if(!_isActive)
+            if(!IsActive)
             {
-                transform.LeanMoveLocal(_shownPosition, 1).setEaseOutQuart();
-                _isActive = true;
-            }
-            if(_isActive)
-            {
-                transform.LeanMoveLocal(_hidenPosition, 1).setEaseOutQuart();
-                _isActive = false;
+                IsActive = true;
             }
 
-            _zigguratController = ziggurat;
-            
-
+            Ziggurat = ziggurat;
         }
 
         private void ShowMenu()
         {
-            if (!_isActive)
-            {
-                StartCoroutine(MoveFromTo(_hidenPosition, _shownPosition, 1f));
-                _isActive = true;
-                return;
-            }
-            if (_isActive)
-            {
-                StartCoroutine(MoveFromTo(_shownPosition, _hidenPosition, 1f));
-                _isActive = false;
-            }
+            IsActive = !IsActive;
         }
 
         private IEnumerator MoveFromTo(Vector3 startPosition, Vector3 endPosition, float time)

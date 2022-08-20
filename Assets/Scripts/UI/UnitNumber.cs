@@ -21,14 +21,15 @@ namespace Ziggurat
         public static event KillEveryoneHandler OnKillEveryone;
 
         private Vector2 _shownPosition = new Vector2(350, 160);
-        private Vector2 _hidenPosition = new Vector2(800, 300);
+        private Vector2 _hiddenPosition;
         private bool _isActive = false;
         private bool _isHealthShown = true;
 
-        private void ChangeInfo() =>
-            _stats.text = string.Format("{0}\n\n{1}\n\n{2}", _greenZig.UnitsNumber, _redZig.UnitsNumber, _blueZig.UnitsNumber);
+        private void Start()
+        {
+            _hiddenPosition = transform.position;
+        }
 
-        // Update is called once per frame
         void Update()
         {
             ChangeInfo();
@@ -47,6 +48,8 @@ namespace Ziggurat
             _healthButton.onClick.RemoveAllListeners();
             _killButton.onClick.RemoveAllListeners();
         }
+        private void ChangeInfo() =>
+        _stats.text = string.Format("{0}\n\n{1}\n\n{2}", _greenZig.UnitsNumber, _redZig.UnitsNumber, _blueZig.UnitsNumber);
 
         private void ShowMenu()
         {
@@ -67,7 +70,7 @@ namespace Ziggurat
                 _healthButton.interactable = false;
                 _killButton.interactable = false;
                 _showButton.interactable = false;
-                StartCoroutine(MoveTo(_hidenPosition, 1f));
+                StartCoroutine(MoveTo(_hiddenPosition, 1f));
                 _isActive = false;
                 _healthButton.interactable = true;
                 _killButton.interactable = true;

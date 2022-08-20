@@ -45,7 +45,6 @@ namespace Ziggurat
         public void OnPointerClick(PointerEventData eventdata)
         {
             OnClickEvent?.Invoke(this);
-            Debug.Log(_zigguratColor + "Ziggurat");
         }
 
         private void DeleteUnit(UnitData unit)

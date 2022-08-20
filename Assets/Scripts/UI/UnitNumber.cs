@@ -20,7 +20,7 @@ namespace Ziggurat
         public delegate void KillEveryoneHandler();
         public static event KillEveryoneHandler OnKillEveryone;
 
-        private Vector2 _shownPosition = new Vector2(350, 160);
+        private Vector2 _shownPosition;
         private Vector2 _hiddenPosition;
         private bool _isActive = false;
         private bool _isHealthShown = true;
@@ -28,6 +28,8 @@ namespace Ziggurat
         private void Start()
         {
             _hiddenPosition = transform.position;
+            _shownPosition = transform.position;
+            _shownPosition.y -= 185;
         }
 
         void Update()

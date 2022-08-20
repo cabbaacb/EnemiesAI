@@ -6,12 +6,19 @@ using UnityEngine.UI;
 
 namespace Ziggurat
 {
-    public class ZigguratPanel : MonoBehaviour
+    public class ZigguratPanel : UnitStats
     {
         [SerializeField] private Text _zigguratText = null;
 
-        //[SerializeField] private Slider _zigguratSlider = null;
-        [SerializeField] private Button _hideButton = null;
+        [SerializeField] private Slider _heathSlider = null;
+        [SerializeField] private Slider _speedSlider = null;
+        [SerializeField] private Slider _fastAttackSlider = null;
+        [SerializeField] private Slider _strongAttackSlider = null;
+        [SerializeField] private Slider _AttackIntervalSlider = null;
+        [SerializeField] private Slider _ChanceToMissSlider = null;
+        [SerializeField] private Slider _doubleDamageSlider = null;
+        [SerializeField] private Slider _FastToStrongRatioSlider = null;
+        [SerializeField] private Slider _detectionRadiusSlider = null;
 
         private ZigguratController _zigguratController = null;
         private ZigguratController Ziggurat
@@ -26,7 +33,7 @@ namespace Ziggurat
 
 
         private Vector2 _hiddenPosition;
-        private Vector2 _shownPosition = new Vector2(126, 66);
+        private Vector2 _shownPosition;
 
         private bool _isActive = false;
         private bool IsActive
@@ -49,22 +56,76 @@ namespace Ziggurat
         void Start()
         {
             _hiddenPosition = transform.position;
+            _shownPosition = transform.position;
+            _shownPosition.x += 330;
         }
 
         private void OnEnable()
         {
             ZigguratController.OnClickEvent += SetZiggurat;
-            _hideButton.onClick.AddListener(ShowMenu);
         }
 
         private void OnDisable()
         {
             ZigguratController.OnClickEvent -= SetZiggurat;
-            _hideButton.onClick.RemoveAllListeners();
         }
 
+        public void ShowMenu()
+        {
+            IsActive = !IsActive;
+        }
 
-        
+        public void SetHealth(float health)
+        { 
+            _health = (int)health;
+            Ziggurat.SetHealth(Health);
+        }
+
+        public override void SetSpeed(float speed)
+        {
+            base.SetSpeed(speed);
+            Ziggurat.SetSpeed(Speed);
+        }
+        public void SetFastAttackDamage(float damage)
+        { 
+            _fastAttackDamage = (int)damage;
+            Ziggurat.SetFastAttackDamage(FastAttackDamage);
+        }
+        public void SetStrongAttackDamage(float damage)
+        { 
+            _strongAttackDamage = (int)damage;
+            Ziggurat.SetStrongAttackDamage(StrongAttackDamage);
+        }
+
+        public override void SetAttackInterval(float attackInterval)
+        {
+            base.SetAttackInterval(attackInterval);
+            Ziggurat.SetAttackInterval(AttackInterval);
+        }
+
+        public override void SetChancetoMiss(float chance)
+        {
+            base.SetChancetoMiss(chance);
+            Ziggurat.SetChancetoMiss(ChanceToMiss);
+        }
+
+        public override void SetDoubleDamageChance(float chance)
+        {
+            base.SetDoubleDamageChance(chance);
+            Ziggurat.SetDoubleDamageChance(DoubleDamageChance);
+        }
+        public void SetFastToStrongAttackChanceRatio(float ratio)
+        { 
+            _fastToStrongAttackChanceRatio = (int)ratio;
+            Ziggurat.SetFastToStrongAttackChanceRatio(FastToStrongAttackChanceRatio);
+        }
+
+        public override void SetDetectionRadius(float radius)
+        {
+            base.SetDetectionRadius(radius);
+            Ziggurat.SetDetectionRadius(DetectionRadius);
+        }
+
         private void SetZiggurat(ZigguratController ziggurat)
         {
             if(!IsActive)
@@ -73,11 +134,16 @@ namespace Ziggurat
             }
 
             Ziggurat = ziggurat;
-        }
 
-        private void ShowMenu()
-        {
-            IsActive = !IsActive;
+            _heathSlider.value = Ziggurat.Health;
+            _speedSlider.value = Ziggurat.Speed;
+            _fastAttackSlider.value = Ziggurat.FastAttackDamage;
+            _strongAttackSlider.value = Ziggurat.StrongAttackDamage;
+            _AttackIntervalSlider.value = Ziggurat.AttackInterval;
+            _ChanceToMissSlider.value = Ziggurat.ChanceToMiss;
+            _doubleDamageSlider.value = Ziggurat.DoubleDamageChance;
+            _FastToStrongRatioSlider.value = Ziggurat.FastToStrongAttackChanceRatio;
+            _detectionRadiusSlider.value = Ziggurat.DetectionRadius;
         }
 
         private IEnumerator MoveFromTo(Vector3 startPosition, Vector3 endPosition, float time)

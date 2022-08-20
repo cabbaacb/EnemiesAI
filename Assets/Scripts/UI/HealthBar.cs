@@ -12,7 +12,7 @@ namespace Ziggurat
 
         public void UpdateHealthBar()
         {
-            _healthBarInner.fillAmount = Mathf.Clamp((float)_unit.Health / (float)_unit.MaxHealth, 0f, 1f);
+            _healthBarInner.fillAmount = Mathf.Clamp((float)_unit.CurrentHealth / (float)_unit.Health, 0f, 1f);
         }
 
         private void OnEnable()

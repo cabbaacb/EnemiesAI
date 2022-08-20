@@ -123,7 +123,7 @@ namespace Ziggurat
                             minDistance = distance;
                             UnitData target = hitCollider.GetComponent<UnitData>();
                             //print(gameObject.name + " " + target.name);
-                            if (target != null && target.Health > 0) _target = target;
+                            if (target != null && target.CurrentHealth > 0) _target = target;
                         }
                     }
                 }
@@ -132,7 +132,7 @@ namespace Ziggurat
 
         private IEnumerator AttackRoutine()
         {
-            if (_target == null || _target.Health <= 0) yield break;
+            if (_target == null || _target.CurrentHealth <= 0) yield break;
 
             transform.LookAt(_target.transform);    //todo: write proper logic for rotation towards target
             SelectAndStartAttack();

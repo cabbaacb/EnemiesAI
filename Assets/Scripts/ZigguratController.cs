@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 namespace Ziggurat
 {
-    public class ZigguratController : MonoBehaviour, IPointerClickHandler
+    public class ZigguratController : UnitStats, IPointerClickHandler
     {
         [SerializeField] UnitData _unitPrefab = null;
         [SerializeField] float _spawnFrequency = 3f;
@@ -47,6 +47,8 @@ namespace Ziggurat
             OnClickEvent?.Invoke(this);
         }
 
+        public List<UnitData> GetUnits() => _units;
+
         private void DeleteUnit(UnitData unit)
         {
             if(_units.Contains(unit))
@@ -57,7 +59,6 @@ namespace Ziggurat
         {
             GameObject unit = Instantiate(_unitPrefab.gameObject, _spawnPoint, Quaternion.identity);
             UnitData unitData = unit.GetComponent<UnitData>();
-            unitData.SetColor(_zigguratColor);
             unit.layer = 8;
             unit.name = _zigguratColor.ToString() + "Knight";
             if (_showHealthBar)
@@ -65,19 +66,24 @@ namespace Ziggurat
             else
                 unit.GetComponentInChildren<HealthBar>().gameObject.SetActive(false);
 
-
+            SetUnitStats(unitData);
             _units.Add(unit.GetComponent<UnitData>());
             yield return new WaitForSeconds(_spawnFrequency);
             //StartCoroutine(SpawnUnit());
         }
 
-        public List<UnitData> GetUnits() => _units;
-
-        public UnitData SetParams(UnitData unit, int health)
+        private void SetUnitStats(UnitStats unit)
         {
-            unit.SetHealth(health);
+            unit.SetHealth(Health);
+            unit.SetSpeed(Speed);
+            unit.SetFastAttackDamage(FastAttackDamage);
+            unit.SetStrongAttackDamage(StrongAttackDamage);
+            unit.SetChancetoMiss(ChanceToMiss);
+            unit.SetDoubleDamageChance(DoubleDamageChance);
+            unit.SetFastToStrongAttackChanceRatio(FastToStrongAttackChanceRatio);
+            unit.SetDetectionRadius(DetectionRadius);
+            unit.SetColor(Color);
 
-            return unit;
         }
 
 

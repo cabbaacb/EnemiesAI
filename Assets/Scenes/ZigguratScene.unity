@@ -398,7 +398,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 258521918}
-        m_MethodName: ClearStatistics
+        m_MethodName: ClearDeadCount
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7978,6 +7978,7 @@ MonoBehaviour:
   _unitPrefab: {fileID: -126593117171412219, guid: 4786b0090dbb27a4f9d1517d5d6b7b0a,
     type: 3}
   _zigguratColor: 1
+  _deadCount: 0
 --- !u!65 &1010354913
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10843,6 +10844,7 @@ MonoBehaviour:
   _unitPrefab: {fileID: -126593117171412219, guid: 4786b0090dbb27a4f9d1517d5d6b7b0a,
     type: 3}
   _zigguratColor: 3
+  _deadCount: 0
 --- !u!65 &1617742200
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13515,6 +13517,7 @@ MonoBehaviour:
   _unitPrefab: {fileID: -126593117171412219, guid: 4786b0090dbb27a4f9d1517d5d6b7b0a,
     type: 3}
   _zigguratColor: 2
+  _deadCount: 0
 --- !u!65 &2096191720
 BoxCollider:
   m_ObjectHideFlags: 0

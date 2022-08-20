@@ -19,6 +19,7 @@ namespace Ziggurat
         [SerializeField] private Slider _doubleDamageSlider = null;
         [SerializeField] private Slider _FastToStrongRatioSlider = null;
         [SerializeField] private Slider _detectionRadiusSlider = null;
+        [SerializeField] private Slider _spawnRateSlider = null;
 
         private ZigguratController _zigguratController = null;
         private ZigguratController Ziggurat
@@ -34,7 +35,7 @@ namespace Ziggurat
 
         private Vector2 _hiddenPosition;
         private Vector2 _shownPosition;
-
+        private CanvasGroup _canvasGroup;
         private bool _isActive = false;
         private bool IsActive
         {
@@ -58,6 +59,7 @@ namespace Ziggurat
             _hiddenPosition = transform.position;
             _shownPosition = transform.position;
             _shownPosition.x += 330;
+            _canvasGroup = GetComponent<CanvasGroup>();
         }
 
         private void OnEnable()
@@ -126,6 +128,12 @@ namespace Ziggurat
             Ziggurat.SetDetectionRadius(DetectionRadius);
         }
 
+        public override void SetSpawnRate(float frequency)
+        {
+            base.SetSpawnRate(frequency);
+            Ziggurat.SetSpawnRate(SpawnRate);
+        }
+
         private void SetZiggurat(ZigguratController ziggurat)
         {
             if(!IsActive)
@@ -144,10 +152,12 @@ namespace Ziggurat
             _doubleDamageSlider.value = Ziggurat.DoubleDamageChance;
             _FastToStrongRatioSlider.value = Ziggurat.FastToStrongAttackChanceRatio;
             _detectionRadiusSlider.value = Ziggurat.DetectionRadius;
+            _spawnRateSlider.value = Ziggurat.SpawnRate;
         }
 
         private IEnumerator MoveFromTo(Vector3 startPosition, Vector3 endPosition, float time)
         {
+            _canvasGroup.interactable = false;
             var currentTime = 0f;//текущее время смещения
             while (currentTime < time)//асинхронный цикл, выполняется time секунд
             {
@@ -159,6 +169,7 @@ namespace Ziggurat
             }
             //Из-за неточности времени между кадрами, без этой строчки вы не получите точное значение endPosition
             transform.position = endPosition;
+            _canvasGroup.interactable = true;
         }
 
     }

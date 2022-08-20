@@ -15,6 +15,7 @@ namespace Ziggurat
         [SerializeField] [Range(1f, 100f)] protected float _doubleDamageChance = 10;
         [SerializeField] [Range(1f, 100f)] protected int _fastToStrongAttackChanceRatio = 70; //in percentage terms
         [SerializeField] [Range(1f, 10f)] protected float _detectionRadius = 2;
+        [SerializeField] [Range(1f, 10f)] protected float _spawnRate = 3f;
         [SerializeField] protected UnitColor _color;
 
         public int Health { get => _health; }
@@ -27,6 +28,7 @@ namespace Ziggurat
         public float DoubleDamageChance { get => _doubleDamageChance; }
         public int FastToStrongAttackChanceRatio { get => _fastToStrongAttackChanceRatio; }
         public float DetectionRadius { get => _detectionRadius; }
+        public float SpawnRate { get => _spawnRate; }
         public UnitColor Color { get => _color; }
 
         public virtual void SetHealth(int health)
@@ -45,6 +47,7 @@ namespace Ziggurat
         public virtual void SetDoubleDamageChance(float chance) => _doubleDamageChance = chance;
         public virtual void SetFastToStrongAttackChanceRatio(int ratio) => _fastToStrongAttackChanceRatio = ratio;
         public virtual void SetDetectionRadius(float radius) => _detectionRadius = radius;
+        public virtual void SetSpawnRate(float frequency) => _spawnRate = frequency;
         public void SetColor(UnitColor color) => _color = color;
     }
 }

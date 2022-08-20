@@ -9,15 +9,15 @@ namespace Ziggurat
 {
     public class UnitController : MonoBehaviour
     {
-        private UnitData _unit;
+        private Unit _unit;
 
         private NavMeshAgent _navMeshAgent;
-        [SerializeField] private UnitData _target = null;
+        [SerializeField] private Unit _target = null;
         private UnitEnvironment _unitEnvironment;
 
         private Coroutine _attackRoutine;
 
-        public delegate void DeathEventHandler(UnitData unit);
+        public delegate void DeathEventHandler(Unit unit);
         public static event DeathEventHandler OnDeathEvent;
 
         [SerializeField] private bool _isMoving = false;
@@ -39,7 +39,7 @@ namespace Ziggurat
         private void Awake()
         {
             _navMeshAgent = GetComponent<NavMeshAgent>();
-            _unit = GetComponent<UnitData>();
+            _unit = GetComponent<Unit>();
             _unitEnvironment = _unit.gameObject.GetComponent<UnitEnvironment>();
         }
 
@@ -121,8 +121,7 @@ namespace Ziggurat
                         if (distance < minDistance)
                         {
                             minDistance = distance;
-                            UnitData target = hitCollider.GetComponent<UnitData>();
-                            //print(gameObject.name + " " + target.name);
+                            Unit target = hitCollider.GetComponent<Unit>();
                             if (target != null && target.CurrentHealth > 0) _target = target;
                         }
                     }

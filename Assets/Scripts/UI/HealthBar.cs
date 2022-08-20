@@ -7,7 +7,7 @@ namespace Ziggurat
 {
     public class HealthBar : MonoBehaviour
     {
-        [SerializeField] private UnitData _unit = null;
+        [SerializeField] private Unit _unit = null;
         [SerializeField] private Image _healthBarInner = null;
 
         public void UpdateHealthBar()

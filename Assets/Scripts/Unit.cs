@@ -3,11 +3,13 @@ using UnityEngine;
 
 namespace Ziggurat
 {
-    public class UnitData : UnitStats
+    public class Unit : UnitStats
     {
         [SerializeField] private int _currentHealth = 50;
 
         private UnitController _unitController;
+
+        private GameObject _healthBar;
 
         public int CurrentHealth 
         { 
@@ -22,10 +24,34 @@ namespace Ziggurat
             }
         }
 
+        private bool _showHealthBar;
+
+        public bool ShowHealthBar
+        {
+            get { return _showHealthBar; }
+            set
+            { 
+                _showHealthBar = value;
+                _healthBar.SetActive(value);
+            }
+        }
+
+
         private void Start()
         {
             _unitController = GetComponent<UnitController>();
+            _healthBar = GetComponentInChildren<HealthBar>().gameObject;
             _currentHealth = _health;
+        }
+
+        private void OnEnable()
+        {
+            Statistics.OnKillEveryone += Die;
+        }
+
+        private void OnDisable()
+        {
+            Statistics.OnKillEveryone -= Die;
         }
 
         public void TakeDamage(int damage)
@@ -35,7 +61,7 @@ namespace Ziggurat
             OnHealthChange?.Invoke();
         }
 
-        private void Die()
+        public void Die()
         {
             _unitController.Die();
         }

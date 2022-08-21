@@ -5,12 +5,14 @@ using UnityEngine.UI;
 
 namespace Ziggurat
 {
-    public class UnitNumber : MonoBehaviour
+    public class Statistics : MonoBehaviour
     {
         [SerializeField] private ZigguratController _greenZig = null;
         [SerializeField] private ZigguratController _redZig = null;
         [SerializeField] private ZigguratController _blueZig = null;
-        [SerializeField] private Text _stats = null;
+        [SerializeField] private Text _aliveCount = null;
+        [SerializeField] private Text _deadCount = null;
+        [SerializeField] private Text _spawnInCount = null;
         [SerializeField] private Button _showButton = null;
         [SerializeField] private Button _healthButton = null;
         [SerializeField] private Button _killButton = null;
@@ -20,15 +22,36 @@ namespace Ziggurat
         public delegate void KillEveryoneHandler();
         public static event KillEveryoneHandler OnKillEveryone;
 
-        private Vector2 _shownPosition = new Vector2(350, 160);
-        private Vector2 _hidenPosition = new Vector2(800, 300);
+        private Vector2 _shownPosition;
+        private Vector2 _hiddenPosition;
         private bool _isActive = false;
+        private bool IsActive
+        {
+            get { return _isActive; }
+            set
+            {
+                _isActive = value;
+                if (_isActive)
+                {
+                    StartCoroutine(MoveFromTo(_hiddenPosition, _shownPosition, 1f));
+                }
+                if (!_isActive)
+                {
+                    StartCoroutine(MoveFromTo(_shownPosition, _hiddenPosition, 1f));
+                }
+            }
+        }
         private bool _isHealthShown = true;
+        private CanvasGroup _canvasGroup;
 
-        private void ChangeInfo() =>
-            _stats.text = string.Format("{0}\n\n{1}\n\n{2}", _greenZig.UnitsNumber, _redZig.UnitsNumber, _blueZig.UnitsNumber);
+        private void Start()
+        {
+            _hiddenPosition = transform.position;
+            _shownPosition = transform.position;
+            _shownPosition.y -= 185;
+            _canvasGroup = GetComponent<CanvasGroup>();
+        }
 
-        // Update is called once per frame
         void Update()
         {
             ChangeInfo();
@@ -47,33 +70,23 @@ namespace Ziggurat
             _healthButton.onClick.RemoveAllListeners();
             _killButton.onClick.RemoveAllListeners();
         }
-
-        private void ShowMenu()
+        private void ChangeInfo()
         {
-            if (!_isActive)
-            {
-                _healthButton.interactable = false;
-                _killButton.interactable = false;
-                _showButton.interactable = false;
-                StartCoroutine(MoveTo(_shownPosition, 2f));
-                _isActive = true;
-                _healthButton.interactable = true;
-                _killButton.interactable = true;
-                _showButton.interactable = true;
-                return;
-            }
-            if (_isActive)
-            {
-                _healthButton.interactable = false;
-                _killButton.interactable = false;
-                _showButton.interactable = false;
-                StartCoroutine(MoveTo(_hidenPosition, 1f));
-                _isActive = false;
-                _healthButton.interactable = true;
-                _killButton.interactable = true;
-                _showButton.interactable = true;
+            _aliveCount.text = string.Format("{0}\n\n{1}\n\n{2}", _greenZig.UnitsNumber, _redZig.UnitsNumber, _blueZig.UnitsNumber);
+            _deadCount.text = string.Format("{0}\n\n{1}\n\n{2}", _greenZig.DeadCount, _redZig.DeadCount, _blueZig.DeadCount);
+            _spawnInCount.text = string.Format("{0}\n\n{1}\n\n{2}", _greenZig.SpawnTimer, _redZig.SpawnTimer, _blueZig.SpawnTimer);
+        }
 
-            }
+        public void ShowMenu()
+        {
+            IsActive = !IsActive;
+        }
+
+        public void ClearDeadCount()
+        {
+            _greenZig.ClearDeadCount();
+            _redZig.ClearDeadCount();
+            _blueZig.ClearDeadCount();
         }
 
         private void ShowHealthBars()
@@ -88,33 +101,13 @@ namespace Ziggurat
                 OnShowHealthBar?.Invoke(true);
                 _isHealthShown = true;
             }
-
-            /*
-            List<UnitData> units = _greenZig.GetUnits();
-            units.AddRange(_redZig.GetUnits());
-            units.AddRange(_blueZig.GetUnits());
-
-            foreach (var unit in units)
-            {
-                if (_isHealthShown)
-                {
-                    unit.GetComponentInChildren<HealthBar>().gameObject.SetActive(false);
-                    _isHealthShown = false;
-                }
-                else
-                {
-                    unit.GetComponentInChildren<HealthBar>().gameObject.SetActive(true);
-                    _isHealthShown = true;
-                }
-            }
-            */
-
         }
 
         private void KillEveryOne() => OnKillEveryone?.Invoke();
 
-        private IEnumerator MoveTo(Vector3 endPosition, float time)
+        private IEnumerator MoveFromTo(Vector3 startPosition, Vector3 endPosition, float time)
         {
+            _canvasGroup.interactable = false;
             var currentTime = 0f;//текущее время смещения
             while (currentTime < time)//асинхронный цикл, выполняется time секунд
             {
@@ -126,6 +119,7 @@ namespace Ziggurat
             }
             //Из-за неточности времени между кадрами, без этой строчки вы не получите точное значение endPosition
             transform.position = endPosition;
+            _canvasGroup.interactable = true;
         }
     }
 }

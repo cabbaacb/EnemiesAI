@@ -7,12 +7,12 @@ namespace Ziggurat
 {
     public class HealthBar : MonoBehaviour
     {
-        [SerializeField] private UnitData _unit = null;
+        [SerializeField] private Unit _unit = null;
         [SerializeField] private Image _healthBarInner = null;
 
         public void UpdateHealthBar()
         {
-            _healthBarInner.fillAmount = Mathf.Clamp((float)_unit.Health / (float)_unit.MaxHealth, 0f, 1f);
+            _healthBarInner.fillAmount = Mathf.Clamp((float)_unit.CurrentHealth / (float)_unit.Health, 0f, 1f);
         }
 
         private void OnEnable()

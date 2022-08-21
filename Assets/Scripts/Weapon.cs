@@ -14,18 +14,18 @@ namespace Ziggurat
             set { _attackName = value; }
         }
 
-        private UnitData _unit;
+        private Unit _unit;
 
         void Start()
         {
-            _unit = GetComponentInParent<UnitData>();
+            _unit = GetComponentInParent<Unit>();
         }
 
         private void OnTriggerEnter(Collider other)
         {
             if (other.name != _unit.name)
             {
-                if (other.TryGetComponent(out UnitData target))
+                if (other.TryGetComponent(out Unit target))
                 {
                     int chanceToMiss = Random.Range(1, 100);
                     if (chanceToMiss >= _unit.ChanceToMiss)

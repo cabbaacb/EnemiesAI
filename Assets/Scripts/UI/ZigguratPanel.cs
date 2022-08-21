@@ -6,75 +6,158 @@ using UnityEngine.UI;
 
 namespace Ziggurat
 {
-    public class ZigguratPanel : MonoBehaviour
+    public class ZigguratPanel : UnitStats
     {
-        //[SerializeField] private Text _zigguratText = null;
+        [SerializeField] private Text _zigguratText = null;
 
-        //[SerializeField] private Slider _zigguratSlider = null;
-        [SerializeField] private Button _button = null;
+        [SerializeField] private Slider _heathSlider = null;
+        [SerializeField] private Slider _speedSlider = null;
+        [SerializeField] private Slider _fastAttackSlider = null;
+        [SerializeField] private Slider _strongAttackSlider = null;
+        [SerializeField] private Slider _AttackIntervalSlider = null;
+        [SerializeField] private Slider _ChanceToMissSlider = null;
+        [SerializeField] private Slider _doubleDamageSlider = null;
+        [SerializeField] private Slider _FastToStrongRatioSlider = null;
+        [SerializeField] private Slider _detectionRadiusSlider = null;
+        [SerializeField] private Slider _spawnRateSlider = null;
 
         private ZigguratController _zigguratController = null;
+        private ZigguratController Ziggurat
+        {
+            get { return _zigguratController; }
+            set
+            { 
+                _zigguratController = value;
+                _zigguratText.text = value.ZigguratColor.ToString() + " Ziggurat";
+            }
+        }
+
+
+        private Vector2 _hiddenPosition;
+        private Vector2 _shownPosition;
+        private CanvasGroup _canvasGroup;
         private bool _isActive = false;
+        private bool IsActive
+        {
+            get { return _isActive; }
+            set
+            {
+                _isActive = value;
+                if (_isActive)
+                {
+                    StartCoroutine(MoveFromTo(_hiddenPosition, _shownPosition, 1f));
+                }
+                if (!_isActive)
+                {
+                    StartCoroutine(MoveFromTo(_shownPosition, _hiddenPosition, 1f));
+                }
+            }
+        }
 
-        private Vector2 _hidenPosition = new Vector2(-126, 66);
-        private Vector2 _shownPosition = new Vector2(126, 66);
-
-        // Start is called before the first frame update
         void Start()
         {
-            transform.position = _hidenPosition;
-            //_zigguratText.text =
+            _hiddenPosition = transform.position;
+            _shownPosition = transform.position;
+            _shownPosition.x += 330;
+            _canvasGroup = GetComponent<CanvasGroup>();
         }
 
         private void OnEnable()
         {
             ZigguratController.OnClickEvent += SetZiggurat;
-            _button.onClick.AddListener(ShowMenu);
         }
 
         private void OnDisable()
         {
             ZigguratController.OnClickEvent -= SetZiggurat;
-            _button.onClick.RemoveAllListeners();
         }
 
+        public void ShowMenu()
+        {
+            IsActive = !IsActive;
+        }
 
-        
+        public void SetHealth(float health)
+        { 
+            _health = (int)health;
+            Ziggurat.SetHealth(Health);
+        }
+
+        public override void SetSpeed(float speed)
+        {
+            base.SetSpeed(speed);
+            Ziggurat.SetSpeed(Speed);
+        }
+        public void SetFastAttackDamage(float damage)
+        { 
+            _fastAttackDamage = (int)damage;
+            Ziggurat.SetFastAttackDamage(FastAttackDamage);
+        }
+        public void SetStrongAttackDamage(float damage)
+        { 
+            _strongAttackDamage = (int)damage;
+            Ziggurat.SetStrongAttackDamage(StrongAttackDamage);
+        }
+
+        public override void SetAttackInterval(float attackInterval)
+        {
+            base.SetAttackInterval(attackInterval);
+            Ziggurat.SetAttackInterval(AttackInterval);
+        }
+
+        public override void SetChancetoMiss(float chance)
+        {
+            base.SetChancetoMiss(chance);
+            Ziggurat.SetChancetoMiss(ChanceToMiss);
+        }
+
+        public override void SetDoubleDamageChance(float chance)
+        {
+            base.SetDoubleDamageChance(chance);
+            Ziggurat.SetDoubleDamageChance(DoubleDamageChance);
+        }
+        public void SetFastToStrongAttackChanceRatio(float ratio)
+        { 
+            _fastToStrongAttackChanceRatio = (int)ratio;
+            Ziggurat.SetFastToStrongAttackChanceRatio(FastToStrongAttackChanceRatio);
+        }
+
+        public override void SetDetectionRadius(float radius)
+        {
+            base.SetDetectionRadius(radius);
+            Ziggurat.SetDetectionRadius(DetectionRadius);
+        }
+
+        public override void SetSpawnRate(float frequency)
+        {
+            base.SetSpawnRate(frequency);
+            Ziggurat.SetSpawnRate(SpawnRate);
+        }
+
         private void SetZiggurat(ZigguratController ziggurat)
         {
-            if(!_isActive)
+            if(!IsActive)
             {
-                transform.LeanMoveLocal(_shownPosition, 1).setEaseOutQuart();
-                _isActive = true;
-            }
-            if(_isActive)
-            {
-                transform.LeanMoveLocal(_hidenPosition, 1).setEaseOutQuart();
-                _isActive = false;
+                IsActive = true;
             }
 
-            _zigguratController = ziggurat;
-            
+            Ziggurat = ziggurat;
 
-        }
-
-        private void ShowMenu()
-        {
-            if (!_isActive)
-            {
-                StartCoroutine(MoveFromTo(_hidenPosition, _shownPosition, 1f));
-                _isActive = true;
-                return;
-            }
-            if (_isActive)
-            {
-                StartCoroutine(MoveFromTo(_shownPosition, _hidenPosition, 1f));
-                _isActive = false;
-            }
+            _heathSlider.value = Ziggurat.Health;
+            _speedSlider.value = Ziggurat.Speed;
+            _fastAttackSlider.value = Ziggurat.FastAttackDamage;
+            _strongAttackSlider.value = Ziggurat.StrongAttackDamage;
+            _AttackIntervalSlider.value = Ziggurat.AttackInterval;
+            _ChanceToMissSlider.value = Ziggurat.ChanceToMiss;
+            _doubleDamageSlider.value = Ziggurat.DoubleDamageChance;
+            _FastToStrongRatioSlider.value = Ziggurat.FastToStrongAttackChanceRatio;
+            _detectionRadiusSlider.value = Ziggurat.DetectionRadius;
+            _spawnRateSlider.value = Ziggurat.SpawnRate;
         }
 
         private IEnumerator MoveFromTo(Vector3 startPosition, Vector3 endPosition, float time)
         {
+            _canvasGroup.interactable = false;
             var currentTime = 0f;//текущее время смещения
             while (currentTime < time)//асинхронный цикл, выполняется time секунд
             {
@@ -86,6 +169,7 @@ namespace Ziggurat
             }
             //Из-за неточности времени между кадрами, без этой строчки вы не получите точное значение endPosition
             transform.position = endPosition;
+            _canvasGroup.interactable = true;
         }
 
     }

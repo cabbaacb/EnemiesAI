@@ -5,17 +5,30 @@ using UnityEngine.EventSystems;
 
 namespace Ziggurat
 {
-    public class ZigguratController : MonoBehaviour, IPointerClickHandler
+    public class ZigguratController : UnitStats, IPointerClickHandler
     {
-        [SerializeField] UnitData _unitPrefab = null;
-        [SerializeField] float _spawnFrequency = 3f;
-        [SerializeField] UnitColor _zigguratColor = default;
+        [SerializeField] private Unit _unitPrefab = null;
+        [SerializeField] private UnitColor _zigguratColor = default;
 
         private Vector3 _spawnPoint;
-        private List<UnitData> _units;
+        private List<Unit> _units;
         private bool _showHealthBar = true;
 
-        
+        public int _deadCount;
+
+        public int DeadCount
+        {
+            get { return _deadCount; }
+            private set { _deadCount = value; }
+        }
+        private float _spawnTimer = 0;
+
+        public float SpawnTimer
+        {
+            get { return _spawnTimer; }
+        }
+
+
         public UnitColor ZigguratColor { get => _zigguratColor; }
         public int UnitsNumber { get => _units.Count; }
 
@@ -25,40 +38,50 @@ namespace Ziggurat
         private void Awake()
         {
             _spawnPoint = GetComponentInChildren<SpawnPoint>().GetCoordinates();
-            _units = new List<UnitData>();
+            _units = new List<Unit>();
+            _spawnTimer = SpawnRate;
             StartCoroutine(SpawnUnit());
         }
         private void OnEnable()
         {
             UnitController.OnDeathEvent += DeleteUnit;
-            UnitNumber.OnShowHealthBar += ShowHealthBars;
-            UnitNumber.OnKillEveryone += KillEveryone;
+            Statistics.OnShowHealthBar += ShowHealthBars;
         }
 
         private void OnDisable()
         {
             UnitController.OnDeathEvent -= DeleteUnit;
-            UnitNumber.OnShowHealthBar -= ShowHealthBars;
-            UnitNumber.OnKillEveryone -= KillEveryone;
+            Statistics.OnShowHealthBar -= ShowHealthBars;
+        }
+
+        private void Update()
+        {
+            _spawnTimer = (Mathf.Ceil((_spawnTimer - Time.deltaTime) * 100)) / 100;
         }
 
         public void OnPointerClick(PointerEventData eventdata)
         {
             OnClickEvent?.Invoke(this);
-            Debug.Log(_zigguratColor + "Ziggurat");
         }
 
-        private void DeleteUnit(UnitData unit)
+        public void ClearDeadCount()
         {
-            if(_units.Contains(unit))
+            DeadCount = 0;
+        }
+
+        private void DeleteUnit(Unit unit)
+        {
+            if (_units.Contains(unit))
+            {
+                DeadCount++;
                 _units.Remove(unit);
+            }
         }
 
         private IEnumerator SpawnUnit()
         {
             GameObject unit = Instantiate(_unitPrefab.gameObject, _spawnPoint, Quaternion.identity);
-            UnitData unitData = unit.GetComponent<UnitData>();
-            unitData.SetColor(_zigguratColor);
+            Unit unitData = unit.GetComponent<Unit>();
             unit.layer = 8;
             unit.name = _zigguratColor.ToString() + "Knight";
             if (_showHealthBar)
@@ -66,45 +89,35 @@ namespace Ziggurat
             else
                 unit.GetComponentInChildren<HealthBar>().gameObject.SetActive(false);
 
-
-            _units.Add(unit.GetComponent<UnitData>());
-            yield return new WaitForSeconds(_spawnFrequency);
-            //StartCoroutine(SpawnUnit());
+            SetUnitStats(unitData);
+            _units.Add(unit.GetComponent<Unit>());
+            yield return new WaitForSeconds(SpawnRate);
+            _spawnTimer = SpawnRate;
+            StartCoroutine(SpawnUnit());
         }
 
-        public List<UnitData> GetUnits() => _units;
-
-        public UnitData SetParams(UnitData unit, int health)
+        private void SetUnitStats(UnitStats unit)
         {
-            unit.SetHealth(health);
+            unit.SetHealth(Health);
+            unit.SetSpeed(Speed);
+            unit.SetFastAttackDamage(FastAttackDamage);
+            unit.SetStrongAttackDamage(StrongAttackDamage);
+            unit.SetChancetoMiss(ChanceToMiss);
+            unit.SetDoubleDamageChance(DoubleDamageChance);
+            unit.SetFastToStrongAttackChanceRatio(FastToStrongAttackChanceRatio);
+            unit.SetDetectionRadius(DetectionRadius);
+            unit.SetColor(Color);
 
-            return unit;
         }
 
 
         private void ShowHealthBars(bool show)
         {
-            if(show)
-                foreach (var unit in _units)
-                {
-                    unit.GetComponentInChildren<HealthBar>().gameObject.SetActive(true);
-                    _showHealthBar = true;
-                }
-            else
-                foreach(var unit in _units)
-                {
-                    unit.GetComponentInChildren<HealthBar>().gameObject.SetActive(false);
-                    _showHealthBar = false;
-                }
-
-        }
-
-
-        private void KillEveryone()
-        {
             foreach (var unit in _units)
-                DeleteUnit(unit);
+            {
+                unit.ShowHealthBar = show;
+            }
+            _showHealthBar = show;
         }
-
     }
 }
